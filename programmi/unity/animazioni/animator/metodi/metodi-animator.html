@@ -1,0 +1,213 @@
+<!DOCTYPE html> <html><head>
+		<title>Metodi Animator</title>
+		<base href="..\..\..\..\../">
+		<meta id="root-path" root-path="..\..\..\..\../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="Obsidian Vault - Metodi Animator">
+		<meta property="og:title" content="Metodi Animator">
+		<meta property="og:description" content="Obsidian Vault - Metodi Animator">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="programmi/unity/animazioni/animator/metodi/metodi-animator.html">
+		<meta property="og:image" content="undefined">
+		<meta property="og:site_name" content="Obsidian Vault">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script type="module" async="" id="graph-view-script" src="lib/scripts/graph-view.js"></script><script async="" id="graph-wasm-script" src="lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="tinycolor-script" src="lib/scripts/tinycolor.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="pixi-script" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><script async="" id="graph-data-script" src="lib/scripts/graph-data.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript></head><body class="publish css-settings-manager theme-dark show-inline-title show-ribbon"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="search-input-container"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div class="search-input-clear-button" aria-label="Clear search"></div></div><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles"></style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="Metodi Animator">Metodi Animator</h1><div><p dir="auto">Il componente <strong>Animator</strong> in Unity è centrale per il controllo delle animazioni dei GameObject. Offre una serie di metodi e proprietà che ti permettono di gestire e controllare le animazioni tramite script. Ecco un'analisi dettagliata dei metodi e delle proprietà principali dell'Animator:</p></div><div class="heading-wrapper"><h3 data-heading="Metodi dell'Animator" dir="auto" class="heading" id="Metodi_dell'Animator"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Metodi dell'Animator</h3><div class="heading-children"><div><ol>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong><a data-href="SetBool Unity" href="programmi/unity/animazioni/animator/metodi/setbool-unity.html" class="internal-link" target="_self" rel="noopener">SetBool Unity</a> (string name, bool value)</strong></p>
+<ul>
+<li data-line="2" dir="auto">Imposta un parametro di tipo <code>bool</code> nell'Animator Controller. Utilizzato per attivare o disattivare transizioni tra stati di animazione.</li>
+<li data-line="3" dir="auto"><strong>Esempio:</strong></li>
+</ul>
+</li>
+</ol></div><div><pre><code>    animator.SetBool("IsRunning", true);
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="2">
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong><a data-href="SetFloat Unity" href="programmi/unity/animazioni/animator/metodi/setfloat-unity.html" class="internal-link" target="_self" rel="noopener">SetFloat Unity</a> (string name, float value)</strong>
+<ul>
+<li data-line="1" dir="auto">Imposta un parametro di tipo <code>float</code> nell'Animator Controller. Utilizzato per gestire animazioni basate su valori numerici, come la velocità.</li>
+<li data-line="2" dir="auto"><strong>Esempio:</strong></li>
+</ul>
+</li>
+</ol></div><div><pre><code>	animator.SetFloat("Speed", 5.0f);
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="3">
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong><a data-href="SetInteger Unity" href="programmi/unity/animazioni/animator/metodi/setinteger-unity.html" class="internal-link" target="_self" rel="noopener">SetInteger Unity</a> (string name, int value)</strong></p>
+<ul>
+<li data-line="2" dir="auto">Imposta un parametro di tipo <code>int</code> nell'Animator Controller. Utile per gestire animazioni che dipendono da valori interi, come livelli di stato o modalità.</li>
+<li data-line="3" dir="auto"><strong>Esempio</strong></li>
+</ul>
+</li>
+</ol></div><div><pre><code>	animator.SetInteger("WeaponType", 1);
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="4">
+<li data-line="0" dir="auto"><strong><a data-href="SetTrigger Unity" href="programmi/unity/animazioni/animator/metodi/settrigger-unity.html" class="internal-link" target="_self" rel="noopener">SetTrigger Unity</a> (string name)</strong></li>
+</ol></div><div><ul>
+<li data-line="0" dir="auto">Imposta un parametro di tipo <code>trigger</code> nell'Animator Controller. I trigger sono usati per attivare transizioni tra stati di animazione in modo che avvengano solo una volta.</li>
+<li data-line="1" dir="auto"><strong>Esempio:</strong></li>
+</ul></div><div><pre><code>	animator.SetTrigger("Attack");
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="5">
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong><a data-href="ResetTrigger Unity" href="programmi/unity/animazioni/animator/metodi/resettrigger-unity.html" class="internal-link" target="_self" rel="noopener">ResetTrigger Unity</a> (string name)</strong></p>
+<ul>
+<li data-line="2" dir="auto">Resetta un parametro di tipo <code>trigger</code> nell'Animator Controller. Annulla l'effetto del trigger specificato.</li>
+<li data-line="3" dir="auto"><strong>Esempio:</strong></li>
+</ul>
+</li>
+</ol></div><div><pre><code>	animator.ResetTrigger("Attack");
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="6">
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong><a data-href="Play Unity" href="programmi/unity/animazioni/animator/metodi/play-unity.html" class="internal-link" target="_self" rel="noopener">Play Unity</a> (string stateName, int layer = -1, float normalizedTime = float.NegativeInfinity)</strong></p>
+<ul>
+<li data-line="2" dir="auto">Riproduce un'animazione specifica all'interno di un layer e, facoltativamente, a un tempo normalizzato specifico.</li>
+<li data-line="3" dir="auto"><strong>Esempio:</strong></li>
+</ul>
+</li>
+</ol></div><div><pre><code>	animator.Play("JumpAnimation");
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="7">
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong><a data-href="CrossFade Unity" href="programmi/unity/animazioni/animator/metodi/crossfade-unity.html" class="internal-link" target="_self" rel="noopener">CrossFade Unity</a> (string stateName, float transitionDuration, int layer = -1, float normalizedTime = float.NegativeInfinity)</strong></p>
+<ul>
+<li data-line="2" dir="auto">Esegue una transizione graduale verso un altro stato di animazione.</li>
+<li data-line="3" dir="auto"><strong>Esempio:</strong></li>
+</ul>
+</li>
+</ol></div><div><pre><code>	animator.CrossFade("RunAnimation", 0.1f);
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="8">
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong><a data-href="PlayInFixedTime Unity" href="programmi/unity/animazioni/animator/metodi/playinfixedtime-unity.html" class="internal-link" target="_self" rel="noopener">PlayInFixedTime Unity</a> (string stateName, int layer = -1, float fixedTime = 0)</strong></p>
+<ul>
+<li data-line="2" dir="auto">Riproduce un'animazione in un momento specifico del tempo fisso.</li>
+<li data-line="3" dir="auto"><strong>Esempio:</strong></li>
+</ul>
+</li>
+</ol></div><div><pre><code>	animator.PlayInFixedTime("WalkAnimation", 0, 0.5f);
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="9">
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong><a data-href="GetBool Unity" href="programmi/unity/animazioni/animator/metodi/getbool-unity.html" class="internal-link" target="_self" rel="noopener">GetBool Unity</a> (string name)</strong></p>
+<ul>
+<li data-line="2" dir="auto">Restituisce il valore corrente di un parametro di tipo <code>bool</code> dell'Animator Controller.</li>
+<li data-line="3" dir="auto"><strong>Esempio</strong></li>
+</ul>
+</li>
+</ol></div><div><pre><code>	bool isRunning = animator.GetBool("IsRunning");
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="10">
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong><a data-href="GetFloat Unity" href="programmi/unity/animazioni/animator/metodi/getfloat-unity.html" class="internal-link" target="_self" rel="noopener">GetFloat Unity</a> (string name)</strong></p>
+<ul>
+<li data-line="2" dir="auto">Restituisce il valore corrente di un parametro di tipo <code>float</code> dell'Animator Controller.</li>
+<li data-line="3" dir="auto"><strong>Esempio</strong></li>
+</ul>
+</li>
+</ol></div><div><pre><code>	float speed = animator.GetFloat("Speed");
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="11">
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong><a data-href="GetInteger Unity" href="programmi/unity/animazioni/animator/metodi/getinteger-unity.html" class="internal-link" target="_self" rel="noopener">GetInteger Unity</a> (string name)</strong></p>
+<ul>
+<li data-line="2" dir="auto">Restituisce il valore corrente di un parametro di tipo <code>int</code> dell'Animator Controller.</li>
+<li data-line="3" dir="auto"><strong>Esempio:</strong></li>
+</ul>
+</li>
+</ol></div><div><pre><code>	int weaponType = animator.GetInteger("WeaponType");
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="12">
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><del><strong>GetTrigger Unity (string name)</strong></del></p>
+<ul>
+<li data-line="2" dir="auto"><del>Verifica se un parametro di tipo <code>trigger</code> è attivo.</del></li>
+<li data-line="3" dir="auto"><del>**Esempio</del>**</li>
+</ul>
+</li>
+</ol></div><div><pre><code>	bool isTriggerSet = animator.GetTrigger("Attack");
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="13">
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong><a data-href="Update Unity" href="programmi/unity/animazioni/animator/metodi/update-unity.html" class="internal-link" target="_self" rel="noopener">Update Unity</a> (float deltaTime)</strong></p>
+<ul>
+<li data-line="2" dir="auto">Forza l'aggiornamento del sistema di animazione. Normalmente, l'animazione viene aggiornata automaticamente ad ogni frame, ma questo metodo può essere utilizzato se necessario.</li>
+<li data-line="3" dir="auto"><strong>Esempio</strong></li>
+</ul>
+</li>
+</ol></div><div><pre><code>	animator.Update(Time.deltaTime);
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="14">
+<li data-line="0" dir="auto"><a data-href="StringToHash Unity" href="programmi/unity/animazioni/animator/metodi/stringtohash-unity.html" class="internal-link" target="_self" rel="noopener">StringToHash Unity</a></li>
+</ol></div><div><pre><code>	int hash = Animator.StringToHash(string name);
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="15">
+<li data-line="0" dir="auto"><a data-href="SetLayerWeight" href="programmi/unity/animazioni/animator/metodi/setlayerweight.html" class="internal-link" target="_self" rel="noopener">SetLayerWeight</a> (int layerIndex, float weight)</li>
+</ol></div><div><pre><code>	animator.SetLayerWeight(0, 1.0f); // Imposta il peso del primo layer a 100%
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="16">
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong><a data-href="GetLayerWeight Unity" href="programmi/unity/animazioni/animator/metodi/getlayerweight-unity.html" class="internal-link" target="_self" rel="noopener">GetLayerWeight Unity</a></strong></p>
+<ul>
+<li data-line="2" dir="auto">Ottiene il peso (weight) per uno specifico layer. I pesi dei layer controllano l'influenza di ogni layer sull'animazione finale.</li>
+<li data-line="3" dir="auto"><strong>Esempio:</strong></li>
+</ul>
+</li>
+</ol></div><div><pre><code>	float layerWeight = animator.GetLayerWeight(0); // Ottiene il peso del primo layer
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="17">
+<li data-line="0" dir="auto"><strong><a data-href="GetCurrentAnimatorStateInfo Unity" href="programmi/unity/animazioni/animator/metodi/getcurrentanimatorstateinfo-unity.html" class="internal-link" target="_self" rel="noopener">GetCurrentAnimatorStateInfo Unity</a></strong></li>
+</ol></div><div><ul>
+<li data-line="0" dir="auto">Ottiene informazioni sullo stato corrente dell'Animator per un layer specificato.</li>
+<li data-line="1" dir="auto"><strong>Esempio:</strong></li>
+</ul></div><div><pre><code>	AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0); // Ottiene lo stato del primo layer
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="18">
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong><a data-href="GetNextAnimatorStateInfo Unity" href="GetNextAnimatorStateInfo Unity" class="internal-link" target="_self" rel="noopener">GetNextAnimatorStateInfo Unity</a></strong></p>
+<ul>
+<li data-line="2" dir="auto">Ottiene informazioni sullo stato successivo dell'Animator per un layer specificato, che può essere utile per animazioni che si stanno preparando a passare allo stato successivo.</li>
+<li data-line="3" dir="auto"><strong>Esempio:</strong></li>
+</ul>
+</li>
+</ol></div><div><pre><code>	AnimatorStateInfo nextStateInfo = animator.GetNextAnimatorStateInfo(0); // Ottiene il prossimo stato del primo layer
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="19">
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong><a data-href="GetBoneTransform Unity" href="programmi/unity/animazioni/animator/metodi/getbonetransform-unity.html" class="internal-link" target="_self" rel="noopener">GetBoneTransform Unity</a></strong></p>
+<ul>
+<li data-line="2" dir="auto">Ottiene il <code>Transform</code> per un determinato osso nell'Avatar. Questo è utile per accedere ai singoli ossa per scopi di animazione o manipolazione.</li>
+<li data-line="3" dir="auto"><strong>Esempio:</strong></li>
+</ul>
+</li>
+</ol></div><div><pre><code>	Transform headTransform = animator.GetBoneTransform(HumanBodyBones.Head);
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="20">
+<li data-line="0" dir="auto"><a data-href="StartPlayback Unity" href="programmi/unity/animazioni/animator/metodi/startplayback-unity.html" class="internal-link" target="_self" rel="noopener">StartPlayback Unity</a></li>
+</ol></div><div><pre><code>	animator.StartPlayback(); // Avvia la modalità playback
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="21">
+<li data-line="0" dir="auto"><a data-href="StopPlayback Unity" href="programmi/unity/animazioni/animator/metodi/stopplayback-unity.html" class="internal-link" target="_self" rel="noopener">StopPlayback Unity</a></li>
+</ol></div><div><pre><code>	animator.StopPlayback(); // Ferma la modalità playback
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="22">
+<li data-line="0" dir="auto"><a data-href="StartRecording Unity" href="programmi/unity/animazioni/animator/metodi/startrecording-unity.html" class="internal-link" target="_self" rel="noopener">StartRecording Unity</a></li>
+</ol></div><div><pre><code>	// Inizia la registrazione per la durata specificata
+	animator.StartRecording((int) durataRegistrazione);
+</code><button class="copy-code-button">Copia</button></pre></div><div><ol start="23">
+<li data-line="0" dir="auto"><a data-href="StopRecording Unity" href="programmi/unity/animazioni/animator/metodi/stoprecording-unity.html" class="internal-link" target="_self" rel="noopener">StopRecording Unity</a></li>
+</ol></div><div><pre><code>	animator.StopRecording(); // Ferma la registrazione
+</code><button class="copy-code-button">Copia</button></pre></div></div></div><div class="heading-wrapper"><h3 data-heading="Esempio di Utilizzo dei Metodi dell'Animator" dir="auto" class="heading" id="Esempio_di_Utilizzo_dei_Metodi_dell'Animator"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Esempio di Utilizzo dei Metodi dell'Animator</h3><div class="heading-children"><div><p dir="auto">Immagina di avere un personaggio che può camminare, correre e saltare. Ecco come potresti controllare le animazioni tramite script:</p></div><div><pre><code>using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    public Animator animator;
+
+    void Update()
+    {
+        float move = Input.GetAxis("Vertical");
+        animator.SetFloat("Speed", Mathf.Abs(move));
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetTrigger("Jump");
+        }
+    }
+}
+</code><button class="copy-code-button">Copia</button></pre></div><div><p dir="auto">In questo script:</p></div><div><ul>
+<li data-line="0" dir="auto"><strong><code>SetFloat("Speed", Mathf.Abs(move))</code></strong> controlla la velocità dell'animazione in base all'input verticale dell'utente.</li>
+<li data-line="1" dir="auto"><strong><code>SetTrigger("Jump")</code></strong> attiva l'animazione di salto quando viene premuto il tasto spazio.</li>
+</ul></div></div></div><div class="heading-wrapper"><h3 data-heading="Considerazioni Avanzate" dir="auto" class="heading" id="Considerazioni_Avanzate"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Considerazioni Avanzate</h3><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto"><strong>Animator Override Controller</strong>: Permette di sostituire le animazioni in un Animator Controller esistente con nuove animazioni senza modificare l'Animator Controller originale.<br>
+</li>
+<li data-line="2" dir="auto"><strong>Animator Layers</strong>: Utilizza i layer per sovrapporre animazioni e gestire animazioni simultanee (come attacchi durante la corsa).<br>
+</li>
+<li data-line="4" dir="auto"><strong>Avatar Masks</strong>: Usa le maschere dell'Avatar per applicare animazioni solo a specifiche parti del corpo.<br>
+</li>
+<li data-line="6" dir="auto"><strong>Playable API</strong>: Utilizza l'API Playable per controllare e manipolare le animazioni in modo più avanzato e programmabile.<br>
+</li>
+</ul></div></div></div><div class="heading-wrapper"><h3 data-heading="Conclusione" dir="auto" class="heading" id="Conclusione"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Conclusione</h3><div class="heading-children"><div><p dir="auto">Il componente <strong>Animator</strong> di Unity è un potente strumento per la gestione delle animazioni, con una vasta gamma di metodi e proprietà che ti permettono di controllare e personalizzare il comportamento delle animazioni. Utilizzando i metodi dell'Animator, puoi creare animazioni dinamiche e reattive che arricchiscono l'esperienza di gioco.</p></div><div class="mod-footer"></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="programmi\unity\animazioni\animator\metodi\metodi-animator.html#Metodi Animator"><div class="tree-item-contents heading-link" heading-name="Metodi Animator"><span class="tree-item-title">Metodi Animator</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="programmi\unity\animazioni\animator\metodi\metodi-animator.html#Metodi_dell'Animator"><div class="tree-item-contents heading-link" heading-name="Metodi dell'Animator"><span class="tree-item-title">Metodi dell'Animator</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="programmi\unity\animazioni\animator\metodi\metodi-animator.html#Esempio_di_Utilizzo_dei_Metodi_dell'Animator"><div class="tree-item-contents heading-link" heading-name="Esempio di Utilizzo dei Metodi dell'Animator"><span class="tree-item-title">Esempio di Utilizzo dei Metodi dell'Animator</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="programmi\unity\animazioni\animator\metodi\metodi-animator.html#Considerazioni_Avanzate"><div class="tree-item-contents heading-link" heading-name="Considerazioni Avanzate"><span class="tree-item-title">Considerazioni Avanzate</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="programmi\unity\animazioni\animator\metodi\metodi-animator.html#Conclusione"><div class="tree-item-contents heading-link" heading-name="Conclusione"><span class="tree-item-title">Conclusione</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>
